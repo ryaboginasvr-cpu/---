@@ -1,0 +1,292 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио AI-навыков</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, #4361ee 0%, #3a0ca3 50%, #f72585 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Градиентный заголовок с прозрачностью */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        /* Карточки навыков */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .skill-card-header {
+            padding: 1.5rem;
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .skill-card-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-card-body {
+            padding: 1.5rem;
+        }
+        
+        .skill-card-body h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-card-body ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.2rem;
+        }
+        
+        .skill-card-body li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Блоки кейсов */
+        .case-study {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        
+        .case-study h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .case-study p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study .highlight {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        /* Теги инструментов */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Акцентные элементы */
+        .accent-text {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ПОРТФОЛИО AI-навыков</h1>
+            <p>Современные решения с использованием искусственного интеллекта</p>
+        </header>
+        
+        <section>
+            <h2 class="section-title">1. Ключевые AI-навыки и практические кейсы</h2>
+            
+            <div class="skills-grid">
+                <!-- Карточка 1 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <h2>1.1 Промт инжиниринг</h2>
+                        <p>Правила и приемы написания промтов</p>
+                    </div>
+                    <div class="skill-card-body">
+                        <h3>Освоенные навыки:</h3>
+                        <ul>
+                            <li>Формулировка промптов с учетом роли, задачи, контекста, ограничений и желаемого формата ответа.</li>
+                            <li>Применение приемов усиления промптов: уточнения, примеры, шкалы, стиль (tone of voice), структура</li>
+                            <li>Оптимизация взаимодействия с нейросетью для получения точных, релевантных и практически применимых результатов</li>
+                        </ul>
+                        
+                        <div class="case-study">
+                            <h4>Пример кейса:</h4>
+                            <p>Анализ причин низкой маржинальности платной медицинской компании и разработка плана из 5 шагов для их устранения.</p>
+                            <p><span class="highlight">Без нейросети:</span> 4-8 часов (сбор данных, расчеты, анализ, формулировка рекомендаций)</p>
+                            <p><span class="highlight">С нейросетью:</span> 10-30 минут (ввод промта, проверка и корректировка результата)</p>
+                            <p><span class="accent-text">Экономия времени: 85-95%</span></p>
+                        </div>
+                        
+                        <div class="tags">
+                            <span class="tag">ChatGPT</span>
+                            <span class="tag">Claude</span>
+                            <span class="tag">Gemini</span>
+                            <span class="tag">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <h2>1.2 Промт-инжиниринг</h2>
+                        <p>Техники написания промтов</p>
+                    </div>
+                    <div class="skill-card-body">
+                        <h3>Освоенные навыки:</h3>
+                        <ul>
+                            <li>Умение адаптировать промпт под задачу. Знаю, какая техника лучше подходит для разных типов задач — от генерации простого ответа до пошагового решения комплексной задачи или диалога с уточняющими вопросами.</li>
+                            <li>Навык взаимодействия с нейросетью как с инструментом решения профессиональных задач.</li>
+                            <li>Выстраиваю промпты так, чтобы получать структурированные, полезные и применимые в работе результаты: стратегии, планы, аналитику, автоматизационные решения и пр.</li>
+                        </ul>
+                        
+                        <div class="case-study">
+                            <h4>Пример кейса:</h4>
+                            <p>Разработка комплексного финансового анализа и рекомендаций для медицинской и торговой компаний, включая SWOT-анализ, план работы финансового директора, выявление причин низкой маржинальности, анализ отчетов о прибылях и убытках, а также предложение мер по оптимизации затрат и увеличению прибыли.</p>
+                            <p><span class="highlight">Без нейросети:</span> 8-12 часов</p>
+                            <p><span class="highlight">С нейросетью:</span> 1-2 часа</p>
+                            <p><span class="accent-text">Экономия времени: 85-90%</span></p>
+                        </div>
+                        
+                        <div class="tags">
+                            <span class="tag">Chain-of-Thought</span>
+                            <span class="tag">Few-Shot</span>
+                            <span class="tag">Zero-Shot</span>
+                            <span class="tag">Role Prompting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карточка 3 -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <h2>1.3 Сила последовательных промтов</h2>
+                        <p>Решение сложных задач с помощью последовательных промтов</p>
+                    </div>
+                    <div class="skill-card-body">
+                        <h3>Освоенные навыки:</h3>
+                        <ul>
+                            <li>Разделение сложной задачи на этапы с формулировкой последовательных промтов.</li>
+                            <li>Использование нейросетей для пошагового решения профессиональных задач.</li>
+                            <li>Проверка, уточнение и адаптация ответов нейросети под конкретный бизнес-контекст.</li>
+                        </ul>
+                        
+                        <div class="case-study">
+                            <h4>Пример кейса:</h4>
+                            <p>Анализ финансовых данных компании по продаже автоматических воротных систем для выявления ключевых статей затрат, определения наиболее растущих расходов, выяснения причин их роста и предложения мер по оптимизации.</p>
+                            <p><span class="highlight">Без нейросети:</span> 8-12 часов</p>
+                            <p><span class="highlight">С нейросетью:</span> 30-60 минут</p>
+                            <p><span class="accent-text">Экономия времени: 85-90%</span></p>
+                        </div>
+                        
+                        <div class="tags">
+                            <span class="tag">Sequential Prompting</span>
+                            <span class="tag">Task Decomposition</span>
+                            <span class="tag">Context Management</span>
+                            <span class="tag">Iterative Refinement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
